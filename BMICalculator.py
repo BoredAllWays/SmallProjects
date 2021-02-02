@@ -18,4 +18,3 @@ else:
     elif bmi < 18.5:
         print(ut);
 
-# Pranav Raja 
