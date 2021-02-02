@@ -1,4 +1,4 @@
-name = 'Pranav';
+name = 'some name';
 height_m = 1.5240030480060962;
 weight_kg = 37.2;
 bmi = weight_kg / (height_m ** 2);
