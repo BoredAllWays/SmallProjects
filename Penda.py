@@ -1,5 +1,4 @@
 import time
-import emoji
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -27,7 +26,7 @@ for i in range(2,8):
         Assignment = driver.find_element_by_xpath('/html/body/div[4]/div[1]/div[2]/div[6]/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[' +str(i)+']/td[1]').text
     except NoSuchElementException:
         if i == 2:
-                print(f"All Assignments completed, Congrats {emoji.emojize(':thumbs_up:'):} ")
+                print(f"All Assignments completed, Congrats")
                 break
     else:
         ActivityName = driver.find_element_by_xpath('/html/body/div[4]/div[1]/div[2]/div[6]/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[' +str(i)+']/td[3]').text
