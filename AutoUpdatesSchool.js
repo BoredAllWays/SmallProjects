@@ -2,22 +2,10 @@ const puppeteer = require('puppeteer');
 const fs = require('fs')
 const updates_2 = JSON.parse(fs.readFileSync('updates.json', 'utf8'));
 
-let get_update_file = () => {
-  const updatesf = fs.readFileSync('updates.json', 'utf8')
-  return JSON.parse(updatesf)
-} 
-
-let set_update_file = (New_info) => {
-  let info = JSON.stringify(New_info)
-  fs.writeFile('updates.json', info, 'utf8',()=>{console.log("Worked")});
-} 
-
-
 async function stanton_website() {
-  set_update_file({})
   const browser = await puppeteer.launch({headless: true});
   const page = await browser.newPage();
-  await page.goto('https://dcps.duvalschools.org/Page/268');
+  await page.goto('schoolsite.com');
   const hrefElement = await page.$('#module-content-61443 > div > div.ui-widget-header');
   await hrefElement.click();
   console.log('Clicked');
